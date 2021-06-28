@@ -21,7 +21,7 @@ do_action( 'pre_si_estimate_view' ); ?><!DOCTYPE html>
 	<head>
 		<meta charset="<?php bloginfo( 'charset' ); ?>" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-		<title><?php wp_title() ?></title>
+		<?php echo apply_filters( 'document_title_parts', array('title') ); ?>
 		<link rel="profile" href="http://gmpg.org/xfn/11" />
 
 		<script type="text/javascript" src="<?php echo site_url() ?>/wp-includes/js/jquery/jquery.js"></script>
@@ -281,7 +281,7 @@ do_action( 'pre_si_estimate_view' ); ?><!DOCTYPE html>
 
 		<div id="footer_credit">
 			<?php do_action( 'si_document_footer_credit' ) ?>
-			<!--<p><?php esc_attr_e( 'Powered by Sprout Invoices', 'sprout-invoices' ) ?></p>-->
+			<!--<p><?php esc_html_e( 'Powered by Sprout Invoices', 'sprout-invoices' ) ?></p>-->
 		</div><!-- #footer_messaging -->
 	<?php wp_footer(); ?>
 
