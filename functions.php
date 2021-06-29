@@ -4,7 +4,7 @@
  *
  * @package Prime
  */
-add_action( 'after_theme_setup', 'bgtfw_block_widgets' );
+add_action( 'widgets_init', 'bgtfw_block_widgets' );
 
 /**
  * Bgtfw Block Widgets.
