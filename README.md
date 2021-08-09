@@ -13,6 +13,9 @@ The last command creates a new .zip file for a WordPress theme called `Prime` at
 
 ## Changelog
 
+### 2.9.0 ###
+Update: Updating Prime version number to match latest BGTFW release version
+
 ### 2.8.1 ###
 Update: Change incorrect escaping functions to meet WordPress Coding Standards.
 
