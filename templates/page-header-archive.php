@@ -17,7 +17,7 @@
 					printf(
 						'<h1 class="page-title %1$s"><a %2$s href="%3$s" rel="bookmark">%4$s</a></h1>',
 						esc_attr( get_theme_mod( 'bgtfw_global_title_size' ) ),
-						BoldGrid::add_class( 'pages_title', [ 'link' ], false ),
+						esc_attr( BoldGrid::add_class( 'pages_title', [ 'link' ], false ) ),
 						esc_url( $crio_archive_url ),
 						wp_kses_post( get_the_archive_title() )
 					);
@@ -25,7 +25,7 @@
 					printf(
 						'<h1 class="page-title %1$s"><span %2$s>%3$s</span></h1>',
 						esc_attr( get_theme_mod( 'bgtfw_global_title_size' ) ),
-						BoldGrid::add_class( 'pages_title', [ 'link' ], false ),
+						esc_attr( BoldGrid::add_class( 'pages_title', [ 'link' ], false ) ),
 						wp_kses_post( get_the_archive_title() )
 					);
 				}
