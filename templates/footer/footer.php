@@ -11,7 +11,7 @@
 <footer id="colophon" <?php BoldGrid::add_class( 'footer', [ 'site-footer' ] ); ?> role="contentinfo" <?php BoldGrid_Framework_Schema::footer( true ); ?>>
 	<?php do_action( 'boldgrid_footer_top' ); ?>
 	<div <?php BoldGrid::add_class( 'footer_content', [ 'bgtfw-footer', 'footer-content' ] ); ?>>
-		<?php echo wp_kses_post( BoldGrid::dynamic_footer() ); ?>
+		<?php echo BoldGrid::dynamic_footer(); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 	</div>
 	<?php do_action( 'boldgrid_footer_bottom' ); ?>
 </footer><!-- #colophon -->

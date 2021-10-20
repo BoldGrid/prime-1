@@ -12,6 +12,6 @@
 	<div class="custom-header-media">
 		<?php the_custom_header_markup(); ?>
 	</div>
-	<?php echo wp_kses_post( BoldGrid::dynamic_header() ); ?>
+	<?php echo BoldGrid::dynamic_header(); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 	<?php do_action( 'boldgrid_header_bottom' ); ?>
 </header><!-- #masthead -->
