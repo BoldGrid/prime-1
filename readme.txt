@@ -3,8 +3,8 @@ Contributors: boldgrid, timph, rramo012, bgnicolepaschen, joemoto, imh_brad, jam
 Tags: news, blog, e-commerce, sticky-post, theme-options, threaded-comments, full-width-template, footer-widgets, featured-images, flexible-header, custom-header, custom-logo, custom-background, custom-colors, custom-menu, editor-style, translation-ready, left-sidebar, right-sidebar, grid-layout, one-column, two-columns, three-columns, four-columns
 Requires PHP: 5.6
 Requires at least: 4.8
-Tested up to: 5.7
-Stable tag: 2.9.5
+Tested up to: 5.8
+Stable tag: 2.10.0
 License: GPL-3.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-3.0-standalone.html
 
@@ -13,10 +13,23 @@ Prime is a WordPress SuperTheme that allows designers, developers and other web 
 == Description ==
 Prime is a WordPress SuperTheme that allows designers, developers and other web professionals to create without bounds or restrictions.  Prime’s advanced customization options are completely integrated with the WordPress Customizer API, providing you with a powerful, but familiar interface to customize your website. Our integration gives you granular control over many elements straight from the Customizer, and even device previews so you can see how your site looks on different devices. Crio’s unique color palette system keeps colors consistent across your site. Drag and drop colors in your palette to increase or decrease the usage of that color throughout your website. Use the advanced controls to create a custom Header, Footer, or Blog Page layout. Be Bold and stand above the rest with Prime by BoldGrid!
 
+== Upgrade Notice ==
+= 2.10.0 =
+This version includes CSS fixes for incorrect margin / padding issues. If you are using the Custom CSS as a temporary fix for these issues, this update may possibly conflict with your custom CSS.
+
 == Changelog ==
 
-= 2.9.5 =
-Bug Fix: Fix escaping in template file [#510](https://github.com/BoldGrid/boldgrid-theme-framework/issues/510)
+= 2.10.0 =
+* Bug Fix: Fix escaping in template file [#510](https://github.com/BoldGrid/boldgrid-theme-framework/issues/510)
+* Bug Fix: Add Menu Link Hover Color Control in Crio [#328](https://github.com/BoldGrid/boldgrid-theme-framework/issues/328)
+* Bug Fix: Explicit button height and nowrap makes buttons on mobile look bad [#475](https://github.com/BoldGrid/boldgrid-theme-framework/issues/475)
+* Bug Fix: Improve button display in menus [#509](https://github.com/BoldGrid/boldgrid-theme-framework/issues/509)
+* Bug Fix: Remove Text-Wrap from Headings [#508](https://github.com/BoldGrid/boldgrid-theme-framework/issues/508)
+* Bug Fix: Cannot work with page title control from page unless Pro is active [#501](https://github.com/BoldGrid/boldgrid-theme-framework/issues/501)
+* Bug Fix: Pagination padding and full-width margins creating horizontal scroll on mobile [#357](https://github.com/BoldGrid/boldgrid-theme-framework/issues/357)
+* Bug Fix: Continued padding / margin fixes in Crio [#347](https://github.com/BoldGrid/boldgrid-theme-framework/issues/347)
+* Bug Fix: Search result excerpt incldues the word Read... unlinked without space [#448](https://github.com/BoldGrid/boldgrid-theme-framework/issues/448)
+* Bug Fix: Fix escaping in template file [105677](https://themes.trac.wordpress.org/ticket/105677)
 
 = 2.9.0 =
 Update: Updating Prime version number to match latest BGTFW release version
