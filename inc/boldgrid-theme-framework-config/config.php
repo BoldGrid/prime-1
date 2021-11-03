@@ -210,7 +210,7 @@ if ( ! function_exists( 'boldgrid_prime_framework_config' ) ) {
 		$config['customizer']['controls']['bgtfw_pages_container']['default'] = '';
 
 		// Primary background color.
-		$config['customizer']['controls']['boldgrid_background_color']['default'] = 'color-4';
+		$config['customizer']['controls']['boldgrid_background_color']['default'] = 'neutral-color';
 
 		// Primary headings color.
 		$config['customizer']['controls']['bgtfw_headings_color']['default'] = 'color-2';
