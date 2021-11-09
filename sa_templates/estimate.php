@@ -214,7 +214,7 @@ do_action( 'pre_si_estimate_view' ); ?><!DOCTYPE html>
 					<?php if ( si_is_estimate_declined() ) : ?>
 						<a class="decline_estimate" href="javascript:void(0)"><?php _e( 'Estimate Declined', 'sprout-invoices' ) ?></a>
 					<?php else : ?>
-						<a href="#decline" class="decline_estimate status_change" data-status-change="decline" data-id="<?php the_ID() ?>" data-nonce="<?php esc_attr_e( wp_create_nonce( SI_Controller::NONCE ) ) ?>"><?php esc_html_e( 'Decline Estimate', 'sprout-invoices' ) ?></a>
+						<a href="#decline" class="decline_estimate status_change" data-status-change="decline" data-id="<?php the_ID() ?>" data-nonce="<?php echo esc_attr( wp_create_nonce( SI_Controller::NONCE ) ); ?>"><?php esc_html_e( 'Decline Estimate', 'sprout-invoices' ) ?></a>
 					<?php endif ?>
 
 					<?php if ( si_is_estimate_approved() ) : ?>
