@@ -4,7 +4,7 @@ Tags: news, blog, e-commerce, sticky-post, theme-options, threaded-comments, ful
 Requires PHP: 5.6
 Requires at least: 4.8
 Tested up to: 5.8
-Stable tag: 2.10.0
+Stable tag: 2.11.0
 License: GPL-3.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-3.0-standalone.html
 
@@ -18,6 +18,11 @@ Prime is a WordPress SuperTheme that allows designers, developers and other web 
 This version includes CSS fixes for incorrect margin / padding issues. If you are using the Custom CSS as a temporary fix for these issues, this update may possibly conflict with your custom CSS.
 
 == Changelog ==
+
+= 2.11.0 =
+* New Feature: Added responsive font size controls for Body Font, Headings and Site Title[#84](https://github.com/BoldGrid/boldgrid-theme-framework/issues/84)
+* New Feature: Added a new set of controls to allow users to set a max-width for full width containers[#540](https://github.com/BoldGrid/boldgrid-theme-framework/issues/540)
+* New Feature: Added support for new Sticky Header template and Footer Template features in Crio Pro 1.5.0[#544](https://github.com/BoldGrid/boldgrid-theme-framework/pull/544)
 
 = 2.10.0 =
 * Bug Fix: Fix escaping in template file [#510](https://github.com/BoldGrid/boldgrid-theme-framework/issues/510)
