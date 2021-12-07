@@ -25,6 +25,9 @@ $has_header_template = apply_filters( 'crio_premium_get_page_header', get_the_ID
 $has_header_template = get_the_ID() === $has_header_template ? false : $has_header_template;
 $template_has_title  = get_post_meta( $has_header_template, 'crio-premium-template-has-page-title', true );
 
+$has_sticky_template = apply_filters( 'crio_premium_get_sticky_page_header', get_the_ID() );
+$has_sticky_template = get_the_ID() === $has_sticky_template ? false : $has_sticky_template;
+
 ?>
 <!doctype html>
 <!-- BGTFW Version: <?php echo esc_html( $bgtfw_configs['framework-version'] ); ?> -->
@@ -59,7 +62,7 @@ $template_has_title  = get_post_meta( $has_header_template, 'crio-premium-templa
 			<?php
 			}
 			?>
-		<?php do_action( 'boldgrid_header_after' ); ?>
+		<?php do_action( 'boldgrid_header_after', $has_sticky_template ); ?>
 		<?php do_action( 'boldgrid_content_before' ); ?>
 
 		<?php if ( ! $template_has_title ) : ?>
