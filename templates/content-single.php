@@ -19,6 +19,7 @@
 						array( 'class' => get_theme_mod( 'bgtfw_post_header_feat_image_align' ) )
 					);
 				}
+				do_action( 'bgtfw_after_post_header' );
 				?>
 				<?php the_content(); ?>
 				<?php wp_link_pages( array( 'before' => '<nav class="page-nav"><p>' . __( 'Pages:', 'bgtfw' ), 'after' => '</p></nav>' ) ); ?>
