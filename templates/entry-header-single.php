@@ -21,7 +21,17 @@ do_action( 'boldgrid_before_entry_title' ); ?>
 	?>
 	>
 		<div <?php BoldGrid::add_class( 'featured_image_single', [ 'featured-imgage-header' ] ); ?>>
-			<?php the_title( sprintf( '<p class="entry-title page-title ' . get_theme_mod( 'bgtfw_global_title_size' ) . '"><a ' . BoldGrid::add_class( 'posts_title', [ 'link' ], false ) . ' href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></p>' ); ?>
+			<?php
+			$title_element    = apply_filters( 'bgtfw_entry_title_element', 'p' );
+			$title_size       = get_theme_mod( 'bgtfw_global_title_size' );
+			$title_link_class = BoldGrid::add_class( 'posts_title', [ 'link' ], false );
+			$title_link_url   = esc_url( get_permalink() );
+
+			the_title(
+				'<' . $title_element . ' class="entry-title page-title ' . $title_size . '"><a ' . $title_link_class . ' href="' . $title_link_url . '" rel="bookmark">',
+				'</a></' . $title_element . '>'
+			);
+			?>
 			<?php if ( 'post' == get_post_type() ) : ?>
 			<div class="entry-meta">
 				<?php boldgrid_posted_on(); ?>
