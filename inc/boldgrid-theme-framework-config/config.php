@@ -456,14 +456,8 @@ if ( ! function_exists( 'boldgrid_prime_framework_config' ) ) {
 		// Primary Menu -Link color.
 		$config['customizer']['controls']['bgtfw_menu_items_link_color_main']['default'] = 'color-4';
 
-		// Primary Sub Menu -Link color.
-		$config['customizer']['controls']['bgtfw_menu_items_sub_link_color_main']['default'] = 'color-4';
-
 		// Primary Menu - Active link color.
 		$config['customizer']['controls']['bgtfw_menu_items_active_link_color_main']['default'] = 'color-1';
-
-		// Primary Sub Menu - Active link color.
-		$config['customizer']['controls']['bgtfw_menu_items_sub_active_link_color_main']['default'] = 'color-1';
 
 		// Primary Menu - Hover color.
 		$config['customizer']['controls']['bgtfw_menu_items_hover_color_main']['default'] = 'color-4';
