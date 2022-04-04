@@ -33,14 +33,27 @@ $has_sticky_template = get_the_ID() === $has_sticky_template ? false : $has_stic
 <!-- BGTFW Version: <?php echo esc_html( $bgtfw_configs['framework-version'] ); ?> -->
 <html <?php language_attributes(); ?>>
 <?php
-	if ( $is_sa_invoice ) {
-		get_template_part( 'sa_templates/invoice' );
-	} elseif ( $is_sa_estimate ) {
-		get_template_part( 'sa_templates/estimate' );
-	} else {
-		get_template_part( 'templates/head' );
+if ( $is_sa_invoice ) {
+	get_template_part( 'sa_templates/invoice' );
+} elseif ( $is_sa_estimate ) {
+	get_template_part( 'sa_templates/estimate' );
+} else {
+	get_template_part( 'templates/head' );
 	?>
-	<body <?php body_class(); ?>>
+	<body
+	<?php
+	body_class();
+	$container_type = apply_filters( 'bgtfw_get_container_type', $post );
+	echo ( ! empty( $container_type ) && $post !== $container_type ? 'data-container="' . esc_attr( $container_type ) . '"' : '' );
+
+	$max_width_attributes = apply_filters( 'bgtfw_get_max_width', $post );
+	if ( ! empty( $max_width_attributes ) && $post !== $max_width_attributes ) {
+		foreach ( $max_width_attributes as $attribute => $value ) {
+			echo ' data-' . esc_attr( $attribute ) . '="' . esc_attr( $value ) . '"';
+		}
+	}
+	?>
+		>
 		<?php
 			// Invoking core hook for plugins to hook first in place on the body content. Ref: https://core.trac.wordpress.org/ticket/46679.
 			do_action( 'wp_body_open' ); // phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedHooknameFound
@@ -59,7 +72,7 @@ $has_sticky_template = get_the_ID() === $has_sticky_template ? false : $has_stic
 				get_template_part( 'templates/header/header', $bgtfw_configs['template']['header'] );
 				?>
 			</div><!-- /.header -->
-			<?php
+				<?php
 			}
 			?>
 		<?php do_action( 'boldgrid_header_after', $has_sticky_template ); ?>
@@ -67,7 +80,7 @@ $has_sticky_template = get_the_ID() === $has_sticky_template ? false : $has_stic
 
 		<?php if ( ! $template_has_title ) : ?>
 		<div id="content" <?php BoldGrid::add_class( 'site_content', array( 'site-content' ) ); ?> role="document">
-			<?php do_action( 'bgtfw_page_header' ) ?>
+			<?php do_action( 'bgtfw_page_header' ); ?>
 			<?php if ( 'above' === get_theme_mod( 'bgtfw_global_title_position' ) && ! $boldgrid_theme_framework->woo->is_shop_page() && ! $template_has_title ) : ?>
 				<?php get_template_part( 'templates/page-headers' ); ?>
 			<?php endif; ?>
