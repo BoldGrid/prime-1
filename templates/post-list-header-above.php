@@ -8,7 +8,9 @@
  */
 ?>
 <header <?php BoldGrid::add_class( 'entry_header', [ 'entry-header', 'above' ] ); ?>>
-	<div <?php BoldGrid::add_class( 'featured_image', [ 'featured-imgage-header' ] ); ?> <?php is_single() ? : bgtfw_featured_img_bg( $post->ID, true ); ?>></div>
+	<div <?php BoldGrid::add_class( 'featured_image', [ 'featured-imgage-header' ] ); ?> <?php is_single() ? : bgtfw_featured_img_bg( $post->ID, true ); ?>>
+		<a class="featured-image-link" href="<?php echo esc_url( get_permalink( $post->ID ) ); ?>" title="<?php echo esc_attr( get_the_title( $post->ID ) ); ?>"></a>
+	</div>
 	<div>
 		<?php the_title( sprintf( '<p class="entry-title ' . get_theme_mod( 'bgtfw_blog_post_header_title_size' ) . '"><a ' . BoldGrid::add_class( 'blog_page_post_title', [ 'link' ], false ) . ' href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></p>' ); ?>
 		<?php if ( 'post' == get_post_type() ) : ?>

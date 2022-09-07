@@ -16,5 +16,7 @@
 			</div><!-- .entry-meta -->
 		<?php endif; ?>
 	</div>
-	<div <?php BoldGrid::add_class( 'featured_image', [ 'featured-imgage-header' ] ); ?> <?php is_single() ? : bgtfw_featured_img_bg( $post->ID, true ); ?>></div>
+	<div <?php BoldGrid::add_class( 'featured_image', [ 'featured-imgage-header' ] ); ?> <?php is_single() ? : bgtfw_featured_img_bg( $post->ID, true ); ?>>
+		<a class="featured-image-link" href="<?php echo esc_url( get_permalink( $post->ID ) ); ?>" title="<?php echo esc_attr( get_the_title( $post->ID ) ); ?>"></a>
+	</div>
 </header><!-- .entry-header -->
