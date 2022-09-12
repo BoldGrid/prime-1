@@ -20,7 +20,9 @@
 				'show' === get_theme_mod( 'bgtfw_blog_post_header_feat_image_display' ) &&
 				has_post_thumbnail() ) : ?>
 			<div class="featured-image container">
-				<?php the_post_thumbnail(); ?>
+				<a class="featured-image-link" href="<?php echo esc_url( get_permalink( $post->ID ) ); ?>" title="<?php echo esc_attr( get_the_title( $post->ID ) ); ?>">
+					<?php the_post_thumbnail(); ?>
+				</a>
 			</div>
 		<?php endif; ?>
 	<?php endif;?>
